@@ -12,16 +12,12 @@
         <p>Hi!, Welcome to the Blog created and documented by Suraj Oliver</p>
     </div>
 
-    <div>
-        <p>published: 13-dec-2019</p>
-        <h2>My First Post</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ratione aliquam reprehenderit at modi consequuntur culpa dolore deserunt quasi, sed magnam expedita exercitationem unde maiores possimus omnis quibusdam praesentium nobis.</p>
-    </div>
-    <div>
-        <p>published: 25-dec-2019</p>
-        <h2>My Second Post</h2>
-        <p>Consectetur adipisicing elit. Itaque ratione aliquam reprehenderit at modi consequuntur culpa dolore deserunt quasi, sed magnam expedita exercitationem unde maiores possimus omnis quibusdam praesentium nobis.</p>
-    </div>
-        
+    {% for post in posts %}
+        <div>
+            <p>published: {{ post.published_date }}</p>
+            <h2>{{ post.title }}</h2>
+            <p>{{ post.body }}</p>
+        </div>
+    {% endfor %}        
 </body>
 </html>
